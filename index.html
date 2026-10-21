@@ -14,6 +14,7 @@ body { min-height:100vh; }
 .wrap { max-width:1180px; margin:0 auto; padding:20px 18px 32px; }
 header h1 { font-size:clamp(1.5rem, 2vw, 2rem); line-height:1.15; margin:6px 0 4px; letter-spacing:-.02em; }
 .kicker, .cat { color:var(--dim); margin:0; font-size:.92rem; }
+.cat a, footer a { color: var(--path); }
 .kicker { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing:.04em; text-transform:uppercase; font-size:.74rem; }
 .layout { display:grid; grid-template-columns: minmax(0, 1.7fr) minmax(260px, .8fr); gap:16px; margin-top:16px; }
 .plate-frame { position:relative; background:#070b12; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
@@ -50,6 +51,7 @@ footer { margin-top:18px; color:var(--dim); font-size:.85rem; }
 <p class="kicker">Frame-locked schematic · 1,020 frames · 30 fps · not a certified reference</p>
 <h1>ECMO Circuit</h1>
 <p class="cat">Medical Technology · prompt p15</p>
+<p class="cat"><a href="https://github.com/mizcausevic-dev/ecmo-circuit-explainer">Repository</a></p>
 </header>
 <div class="layout">
 <div>
@@ -82,7 +84,7 @@ footer { margin-top:18px; color:var(--dim); font-size:.85rem; }
 </aside>
 </div>
 <footer>
-<p>Static plate. No account, no form, no third-party script, no analytics. Built as an illustrative cutaway from a working brief.</p>
+<p>Static plate. No account, no form, no third-party script, no analytics. Built as an illustrative cutaway from a working brief. <a href="https://github.com/mizcausevic-dev/ecmo-circuit-explainer">Repository</a>.</p>
 </footer>
 </div>
 <script id="scene-data" type="application/json">{"id": "p15", "title": "ECMO Circuit", "category": "Medical Technology", "silhouette": "loop", "slowMotion": false, "falseColor": false, "nodes": [{"id": "n1", "glyph": "pipe", "label": "Venous drainage", "role": "path", "x": 0.5, "y": 0.22}, {"id": "n2", "glyph": "pipe", "label": "Arterial return", "role": "path", "x": 0.698, "y": 0.296}, {"id": "n3", "glyph": "pump", "label": "Centrifugal pump", "role": "path", "x": 0.78, "y": 0.48}, {"id": "n4", "glyph": "oxygenator", "label": "Hollow-fiber oxygenator", "role": "path", "x": 0.698, "y": 0.664}, {"id": "n5", "glyph": "gas", "label": "Oxygen", "role": "path", "x": 0.5, "y": 0.74}, {"id": "n6", "glyph": "gas", "label": "Carbon dioxide transfer", "role": "path", "x": 0.302, "y": 0.664}, {"id": "n7", "glyph": "gas", "label": "Gas supply", "role": "path", "x": 0.22, "y": 0.48}, {"id": "n8", "glyph": "exchanger", "label": "Heat exchanger", "role": "energy", "x": 0.302, "y": 0.296}], "edges": [{"from": "n1", "to": "n2", "role": "path", "start": 0, "end": 1019}, {"from": "n2", "to": "n3", "role": "path", "start": 150, "end": 1019}, {"from": "n3", "to": "n4", "role": "path", "start": 300, "end": 1019}, {"from": "n4", "to": "n5", "role": "path", "start": 510, "end": 1019}, {"from": "n5", "to": "n6", "role": "path", "start": 510, "end": 1019}, {"from": "n6", "to": "n7", "role": "path", "start": 750, "end": 1019}, {"from": "n7", "to": "n8", "role": "energy", "start": 750, "end": 1019}], "emphasis": [["n1", "n2"], ["n3"], ["n4"], ["n5", "n6"], ["n7", "n8"]], "stages": [{"f0": 0, "f1": 149, "action": "Reveal venous drainage and arterial return", "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."}, {"f0": 150, "f1": 299, "action": "Show centrifugal pump", "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."}, {"f0": 300, "f1": 509, "action": "Enter hollow-fiber oxygenator", "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."}, {"f0": 510, "f1": 749, "action": "Show oxygen and carbon dioxide transfer", "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."}, {"f0": 750, "f1": 1019, "action": "Pull back to gas supply and heat exchanger", "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."}]}</script>
