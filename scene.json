@@ -11,64 +11,64 @@
       "glyph": "pipe",
       "label": "Venous drainage",
       "role": "path",
-      "x": 0.5,
-      "y": 0.22
+      "x": 0.14,
+      "y": 0.32
     },
     {
       "id": "n2",
       "glyph": "pipe",
       "label": "Arterial return",
       "role": "path",
-      "x": 0.698,
-      "y": 0.296
+      "x": 0.38,
+      "y": 0.32
     },
     {
       "id": "n3",
       "glyph": "pump",
       "label": "Centrifugal pump",
       "role": "path",
-      "x": 0.78,
-      "y": 0.48
+      "x": 0.62,
+      "y": 0.32
     },
     {
       "id": "n4",
       "glyph": "oxygenator",
       "label": "Hollow-fiber oxygenator",
       "role": "path",
-      "x": 0.698,
-      "y": 0.664
+      "x": 0.86,
+      "y": 0.32
     },
     {
       "id": "n5",
       "glyph": "gas",
       "label": "Oxygen",
       "role": "path",
-      "x": 0.5,
-      "y": 0.74
+      "x": 0.14,
+      "y": 0.7
     },
     {
       "id": "n6",
       "glyph": "gas",
       "label": "Carbon dioxide transfer",
       "role": "path",
-      "x": 0.302,
-      "y": 0.664
+      "x": 0.38,
+      "y": 0.7
     },
     {
       "id": "n7",
       "glyph": "gas",
       "label": "Gas supply",
       "role": "path",
-      "x": 0.22,
-      "y": 0.48
+      "x": 0.62,
+      "y": 0.7
     },
     {
       "id": "n8",
       "glyph": "exchanger",
       "label": "Heat exchanger",
       "role": "energy",
-      "x": 0.302,
-      "y": 0.296
+      "x": 0.86,
+      "y": 0.7
     }
   ],
   "edges": [
