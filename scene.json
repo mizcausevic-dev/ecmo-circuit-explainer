@@ -1,177 +1,27 @@
 {
-  "id": "p15",
-  "title": "ECMO Circuit",
-  "category": "Medical Technology",
-  "silhouette": "loop",
-  "slowMotion": false,
-  "falseColor": false,
-  "nodes": [
-    {
-      "id": "n1",
-      "glyph": "pipe",
-      "label": "Venous drainage",
-      "role": "path",
-      "x": 0.14,
-      "y": 0.32
-    },
-    {
-      "id": "n2",
-      "glyph": "pipe",
-      "label": "Arterial return",
-      "role": "path",
-      "x": 0.38,
-      "y": 0.32
-    },
-    {
-      "id": "n3",
-      "glyph": "pump",
-      "label": "Centrifugal pump",
-      "role": "path",
-      "x": 0.62,
-      "y": 0.32
-    },
-    {
-      "id": "n4",
-      "glyph": "oxygenator",
-      "label": "Hollow-fiber oxygenator",
-      "role": "path",
-      "x": 0.86,
-      "y": 0.32
-    },
-    {
-      "id": "n5",
-      "glyph": "gas",
-      "label": "Oxygen",
-      "role": "path",
-      "x": 0.14,
-      "y": 0.7
-    },
-    {
-      "id": "n6",
-      "glyph": "gas",
-      "label": "Carbon dioxide transfer",
-      "role": "path",
-      "x": 0.38,
-      "y": 0.7
-    },
-    {
-      "id": "n7",
-      "glyph": "gas",
-      "label": "Gas supply",
-      "role": "path",
-      "x": 0.62,
-      "y": 0.7
-    },
-    {
-      "id": "n8",
-      "glyph": "exchanger",
-      "label": "Heat exchanger",
-      "role": "energy",
-      "x": 0.86,
-      "y": 0.7
-    }
-  ],
-  "edges": [
-    {
-      "from": "n1",
-      "to": "n2",
-      "role": "path",
-      "start": 0,
-      "end": 1019
-    },
-    {
-      "from": "n2",
-      "to": "n3",
-      "role": "path",
-      "start": 150,
-      "end": 1019
-    },
-    {
-      "from": "n3",
-      "to": "n4",
-      "role": "path",
-      "start": 300,
-      "end": 1019
-    },
-    {
-      "from": "n4",
-      "to": "n5",
-      "role": "path",
-      "start": 510,
-      "end": 1019
-    },
-    {
-      "from": "n5",
-      "to": "n6",
-      "role": "path",
-      "start": 510,
-      "end": 1019
-    },
-    {
-      "from": "n6",
-      "to": "n7",
-      "role": "path",
-      "start": 750,
-      "end": 1019
-    },
-    {
-      "from": "n7",
-      "to": "n8",
-      "role": "energy",
-      "start": 750,
-      "end": 1019
-    }
-  ],
-  "emphasis": [
-    [
-      "n1",
-      "n2"
-    ],
-    [
-      "n3"
-    ],
-    [
-      "n4"
-    ],
-    [
-      "n5",
-      "n6"
-    ],
-    [
-      "n7",
-      "n8"
-    ]
-  ],
+  "id": "va-ecmo",
+  "title": "Veno-arterial ECMO circuit",
+  "fps": 30,
+  "frames": 1020,
+  "index": "0-1019",
+  "palette": {
+    "slate": "#0A0C10",
+    "shell": "#222938",
+    "venous": "#6A040F",
+    "arterial": "#E63946",
+    "gas": "#48CAE4"
+  },
   "stages": [
-    {
-      "f0": 0,
-      "f1": 149,
-      "action": "Reveal venous drainage and arterial return",
-      "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."
-    },
-    {
-      "f0": 150,
-      "f1": 299,
-      "action": "Show centrifugal pump",
-      "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."
-    },
-    {
-      "f0": 300,
-      "f1": 509,
-      "action": "Enter hollow-fiber oxygenator",
-      "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."
-    },
-    {
-      "f0": 510,
-      "f1": 749,
-      "action": "Show oxygen and carbon dioxide transfer",
-      "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."
-    },
-    {
-      "f0": 750,
-      "f1": 1019,
-      "action": "Pull back to gas supply and heat exchanger",
-      "detail": "Earlier hardware stays in frame. This step changes only what is emphasized."
-    }
+    {"f0": 0, "f1": 149, "name": "Console", "action": "Brackets unclamp and the pump head translates along the drive axis."},
+    {"f0": 150, "f1": 299, "name": "Mag-lev pump", "action": "Bearingless impeller drives venous blood out through the volute."},
+    {"f0": 300, "f1": 509, "name": "Membrane lung", "action": "Camera descends into the polymethylpentene hollow-fiber bundle."},
+    {"f0": 510, "f1": 749, "name": "Fiber wall", "action": "Oxygen diffuses in and carbon dioxide diffuses out across a schematic boundary."},
+    {"f0": 750, "f1": 1019, "name": "Full loop", "action": "Pull out to cannula, mag-lev drive, gas blender, membrane lung, and heat exchanger."}
+  ],
+  "limits": [
+    "No zero-hemolysis claim.",
+    "10 μm is a schematic callout, not a measurement.",
+    "No flow, pressure, saturation, RPM, or temperature figures.",
+    "Not clinical instruction."
   ]
 }
